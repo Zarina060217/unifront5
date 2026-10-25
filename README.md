@@ -19,3 +19,5 @@
 *<img width="415" height="334" alt="image" src="https://github.com/user-attachments/assets/149b49c3-5900-4eb1-a637-8d5d4d2d408c" />
 * <img width="454" height="322" alt="image" src="https://github.com/user-attachments/assets/2153f058-1ed3-41c0-97da-eb0a51ec8ed6" />
 
+* Summary
+* Part 1 covers JavaScript fundamentals by creating a userProfile object with multiple data types and using arithmetic operators to calculate age and hobbies count.Part 2 sets up an interactive HTML form and uses event listeners to capture user input, dynamically updating the profile information. Part 3 implements DOM manipulation, allowing users to dynamically add new hobby items or remove the last item from an unordered list.   
