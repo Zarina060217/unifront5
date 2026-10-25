@@ -27,13 +27,14 @@
             };
 
             let currentYear = new Date().getFullYear();
-            let age = currentYear - userProfile.birthYear;
+            let age = currentYear - userProfile.birthYear; 
             let hobbiesCount = userProfile.hobbies.length;
+            
             console.log("Age: "+ age);
             console.log("Hobbies count:"+ hobbiesCount);
 
             document.getElementById("task2Info").textContent = 
-            "Age: " + age + "| Hobbies count: " +hobbiesCount;
+            "Age: " + age + " | Hobbies count: " + hobbiesCount;
 
             function showProfile() {
                 let currentYear = new Date().getFullYear();
