@@ -18,6 +18,16 @@
 
         <p id="profileInfo"></p>
 
+        <h2>Hobbies</h2>
+        <ul id="hobbyList">
+            <li>Horse riding</li>
+            <li>Reading books</li>
+            <li>Dancing latino</li>
+        </ul>
+
+        <button id="addButton">Add Item</button>
+        <button id="removeButton">Remove Item</button>
+
         <script>
             const userProfile = {
                 name: "Khalid",
@@ -60,6 +70,31 @@
                 let age = new Date().getFullYear() - userProfile.birthYear;
                 console.log("Age: "+ age);
                 console.log("Hobbies count: " + userProfile.hobbies.length);
+            });
+
+            document.getElementById("addButton").addEventListener("click", function() {
+                let itemText = prompt("Enter a hobby or task:");
+
+                if (itemText !== null && itemText.trim() !== "") {
+                    let item = document.createElement("li");
+                    item.textContent = itemText;
+
+                    document.getElementById("hobbyList").appendChild(item);
+                    userProfile.hobbies.push(itemText);
+
+                    showProfile();
+                }
+            });
+
+            document.getElementById("removeButton").addEventListener("click", function() {
+                let list = document.getElementById("hobbyList");
+
+                if (list.lastElementChild !== null) {
+                    list.removeChild(list.lastElementChild);
+                    userProfile.hobbies.pop();
+
+                    showProfile();
+                }
             });
         </script>
     </body>
