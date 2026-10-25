@@ -4,6 +4,8 @@
         <title>Assignment 5</title>
     </head>
     <body>
+        <p id="task2Info"></p>
+        <p id="profileInfo"></p>
         <script>
             const userProfile = {
                 name: "Khalid",
@@ -18,9 +20,13 @@
             console.log("Age: "+ age);
             console.log("Hobbies count:"+ hobbiesCount);
 
+            document.getElementById("task2Info").textContent = 
+            "Age: " + age + "| Hobbies count: " +hobbiesCount;
+
             function showProfile() {
                 let currentYear = new Date().getFullYear();
                 let age = currentYear - userProfile.birthYear;
+
                 document.getElementById("profileInfo").textContent = 
                 "Name: " + userProfile.name +
                 ", Age: " + age +
