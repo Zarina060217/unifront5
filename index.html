@@ -7,10 +7,27 @@
         <script>
             const userProfile = {
                 name: "Khalid",
-                bitrhYear: 2003,
+                birthYear: 2003,
                 isDeveloper: true,
                 hobbies: ["Horse riding", "Reading books", "Dancing latino"]
             };
+
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - userProfile.birthYear;
+            let hobbiesCount = userProfile.hobbies.length;
+            console.log("Age: "+ age);
+            console.log("Hobbies count:"+ hobbiesCount);
+
+            function showProfile() {
+                let currentYear = new Date().getFullYear();
+                let age = currentYear - userProfile.birthYear;
+                document.getElementById("profileInfo").textContent = 
+                "Name: " + userProfile.name +
+                ", Age: " + age +
+                ", Developer: " + userProfile.isDeveloper +
+                ", Hobbies: " + userProfile.hobbies.length;
+            }
+            showProfile();
         </script>
     </body>
 </html>
