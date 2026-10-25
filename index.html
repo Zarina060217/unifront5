@@ -17,7 +17,7 @@
         </form>
 
         <p id="profileInfo"></p>
-        
+
         <script>
             const userProfile = {
                 name: "Khalid",
@@ -46,6 +46,20 @@
                 ", Hobbies: " + userProfile.hobbies.length;
             }
             showProfile();
+
+            /*4*/
+            document.getElementById("profileForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                userProfile.name = document.getElementById("username").value;
+                userProfile.birthYear = Number(document.getElementById("birthYear").value);
+
+                showProfile();
+
+                let age = new Date().getFullYear() - userProfile.birthYear;
+                console.log("Age: "+ age);
+                console.log("Hobbies count: " + userProfile.hobbies.length);
+            });
         </script>
     </body>
 </html>
